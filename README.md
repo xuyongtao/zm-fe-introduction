@@ -143,6 +143,7 @@ zm-fe-introduction
     
 ##6.grunt-exec
 (1)grunt-exec is used to execut shell commands.用于执行shell命令
+
 (2)options
 
     exec: {
@@ -161,10 +162,12 @@ zm-fe-introduction
     }
 ##7.grunt-contrib-watch
 (1)grunt-contrib-watch is used to Run predefined tasks whenever watched file patterns are added, changed or deleted.
+
 (2)options 
 
 ##8.grunt-compile-handlebars
 (1)grunt-compile-handlebars is used to Compiles handlebar templates, outputs static HTML
+
 (2)options
 
 
