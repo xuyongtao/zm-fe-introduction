@@ -107,6 +107,69 @@ zm-fe-introduction
           dest: 'sea-modules/zm'
         }]
     }
+##4.grunt-cmd-concat
+(1)grunt-cmd-concat is used to Concatenate cmd files.合并用cmd格式写的文件
+(2)options
+
+    concat: {
+      sites: {
+        options: {
+          include: 'all'//默认值为'self'
+        },
+        files: [{
+          expand: true,
+          cwd: 'sea-modules/zm/sites-concated',
+          src: ['zmlearn/**/*.js'],
+          dest: 'sea-modules/zm/sites-concated/',
+          ext: '.js'
+        }]
+      }
+  }
+##5.grunt-contrib-uglify
+(1)grunt-contrib-uglify is used to Minify files with UglifyJS.
+(2)options
+
+    uglify: {
+      all: {
+        files: [{
+          expand: true,
+          cwd: 'sea-modules/',
+          src: ['zm/**/*.js', '!zm/**/*-debug.js'],
+          dest: 'sea-modules/',
+          ext: '.js'
+        }]
+      }
+    }
+    
+##6.grunt-exec
+(1)grunt-exec is used to execut shell commands.用于执行shell命令
+(2)options
+
+    exec: {
+      fisRelease: {
+        cmd: 'fis release --domains --pack --dest local'
+      },
+      fisReleaseToBackend: {
+        cmd: 'fis release --domains --pack --dest local,zm_be'
+      },
+      fisReleaseAndPush: {
+        cmd: 'fis release --domains --pack --dest local,remote'
+      },
+      fisPush: {
+        cmd: 'fis release --domains --pack --dest remote'
+      }
+    }
+##7.grunt-contrib-watch
+(1)grunt-contrib-watch is used to Run predefined tasks whenever watched file patterns are added, changed or deleted.
+(2)options 
+
+##8.grunt-compile-handlebars
+(1)grunt-compile-handlebars is used to Compiles handlebar templates, outputs static HTML
+(2)options
+
+
+
+
 
 
     
